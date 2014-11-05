@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="SourceWeb"
+  id="myeclipse.1415192349862"
+  context-root="/SourceWeb"
+  j2ee-spec="5.0"
+  archive="SourceWeb.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
