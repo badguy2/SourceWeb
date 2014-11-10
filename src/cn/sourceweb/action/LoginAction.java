@@ -43,19 +43,22 @@ public class LoginAction extends ActionSupport{
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
 		LoginForm loginForm = (LoginForm) form;// TODO Auto-generated method stub
-		ActionForward forword = mapping.getInputForward();
+		ActionForward forward = mapping.getInputForward();
 		String userNameString = loginForm.getUserName();
 		String passwordString = loginForm.getPassword();
+		System.out.print(userNameString);
+		System.out.println(passwordString);
 		UserService service = (UserService)getWebApplicationContext().getBean("UserService");
 		User userFromDB = service.getUserByuserName(userNameString);
 		if(userFromDB!=null){
 			if(passwordString.equals(userFromDB.getPassword()))
-				forword = mapping.findForward("success");
+				forward = mapping.findForward("success");
 			else {
-				forword = mapping.findForward("fail");
+				forward = mapping.findForward("fail");
 			}
 		}
-		return forword;
+		System.out.println(forward);
+		return forward;
 	}
 
 	

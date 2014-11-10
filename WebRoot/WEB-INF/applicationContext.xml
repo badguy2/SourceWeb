@@ -8,6 +8,6 @@
 
 	<bean id="UserDAO" class="cn.sourceweb.po.UserDAO">
 		<property name="sessionFactory">
-			<ref bean="sessionFactory" />
+			<ref bean="UserDAO" />
 		</property>
 	</bean></beans>

@@ -17,7 +17,7 @@
       name="loginForm"
       path="/login"
       scope="request"
-      type="com.SourceWeb.struts.action.LoginAction">
+      type="cn.sourceweb.action.LoginAction">
       <set-property property="cancellable" value="true" />
        <forward name="success" path="/welcome.jsp"/>
       <forward name="fail" path="/login.jsp"/>
